@@ -1,0 +1,5 @@
+{
+  "name": "EchoFlow",
+  "description": "EchoFlow: A sophisticated P2P service discovery platform with featured service boosting, local filtering, comprehensive admin dashboard, and direct community communication.",
+  "requestFramePermissions": ["geolocation"]
+}

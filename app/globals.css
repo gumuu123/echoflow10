@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #4169E1;
+  --color-primary-hover: #3A5FCD;
+  --color-secondary: #89CFF0;
+  --color-surface: #FFFFFF;
+  --color-muted: #F9FAFB;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-indigo-50: #f0f4ff;
+  --color-indigo-100: #e0e9ff;
+  --color-indigo-200: #c7d8ff;
+  --color-indigo-300: #a3c0ff;
+  --color-indigo-400: #7b9eff;
+  --color-indigo-500: #5579ff;
+  --color-indigo-600: #4169e1;
+  --color-indigo-700: #3352cc;
+  --color-indigo-800: #2c42a8;
+  --color-indigo-900: #283a85;
+  --color-indigo-950: #17214d;
+
+  --color-blue-50: #f0f4ff;
+  --color-blue-100: #e0e9ff;
+  --color-blue-200: #c7d8ff;
+  --color-blue-300: #a3c0ff;
+  --color-blue-400: #7b9eff;
+  --color-blue-500: #5579ff;
+  --color-blue-600: #4169e1;
+  --color-blue-700: #3352cc;
+  --color-blue-800: #2c42a8;
+  --color-blue-900: #283a85;
+  --color-blue-950: #17214d;
+
+  --color-violet-50: #f2f9fd;
+  --color-violet-100: #e2f2fa;
+  --color-violet-200: #bbe2f5;
+  --color-violet-300: #89cff0;
+  --color-violet-400: #50b6e9;
+  --color-violet-500: #299cda;
+  --color-violet-600: #1b7dbb;
+  --color-violet-700: #166498;
+  --color-violet-800: #15557e;
+  --color-violet-900: #16476a;
+  --color-violet-950: #0f2e46;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: 65 105 225;
+  --secondary: 137 207 240;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .grad-primary {
+    background: linear-gradient(135deg, #4169E1 0%, #89CFF0 100%);
+  }
+
+  .text-grad {
+    background: linear-gradient(135deg, #4169E1 0%, #89CFF0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+}
